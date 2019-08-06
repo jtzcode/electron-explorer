@@ -1,0 +1,17 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h2>About Author</h2>
+        <p>TZ is an experienced Web developer. Learn more at my blog: <a href="https://jtzcode.github.io">Click here</a></p>
+        <button class="close-btn">Close</button>
+
+        <script>
+            const { ipcRenderer } = require('electron');
+            document.querySelector('.close-btn').addEventListener('click', () => {
+                ipcRenderer.send('closeInfoWindow');
+            });
+        </script>
+    </body>
+</html>
